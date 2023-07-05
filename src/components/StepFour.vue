@@ -21,13 +21,34 @@
         </div>
 </template>
 
+<style>
+.animation {
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.05), 0 0 0 4rem rgba(255, 255, 255, 0.05), 0 0 0 8rem rgba(255, 255, 255, 0.05);
+  }
+  100% {
+    box-shadow: 0 0 0 4rem rgba(255, 255, 255, 0.05), 0 0 0 8rem rgba(255, 255, 255, 0.05), 0 0 0 12rem rgba(255, 255, 255, 0.05);
+  }
+}
+</style>
+
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { component, userChoice, userElement, computerChoice, computerElement, getResult, updateScore } from '../../store/store';
 
 const rawHTML = `${userElement.value.outerHTML}`
 
 const result = getResult(userChoice.value, computerChoice.value)
 
+onMounted(() => {
+    document.getElementById(result)?.classList.add('animation')
+})
+
 const showResult = userChoice.value === result ? ("You Win") : (computerChoice.value === result ? "You Lose" : "It's a Tie")
+
 showResult === 'You Win' ? updateScore('increase') : (showResult === 'You Lose' ? updateScore('decrease') : console.log("Score doesn't change"))
 </script>
