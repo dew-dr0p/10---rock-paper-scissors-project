@@ -9,8 +9,12 @@
             <img src="../assets/images/logo.svg" alt="Rock Paper Scissor Logo">
             <div class="bg-[#FFF] text-text-dark justify-center items-center flex flex-col rounded-xl">
                 <p class="text-gradients-paperA text-xl">Score</p>
-                <h5 class="text-7xl font-bold">12</h5>
+                <h5 class="text-7xl font-bold">{{ score }}</h5>
             </div>
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+import { score } from '../../store/store'
+</script>
