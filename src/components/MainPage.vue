@@ -35,6 +35,8 @@ import { ref } from 'vue';
 
 
 const choices = ["rock", "paper", "scissors"]
+const bonusChoices = ["rock", "spock", "paper", "lizard", "scissors"]
+
 let map: Record<string, any> = {}
 
 // let map = new Map()
@@ -66,14 +68,43 @@ choices.forEach((choice, i) => {
     console.log(map)
 })
 
+bonusChoices.forEach((choice, i) => {
+    console.log(map)
+    map[choice] = {};
+    for (let j = 0, half = (bonusChoices.length-1)/2; j < bonusChoices.length; j++) {
+        let opposition = (i+j)%bonusChoices.length
+        if (!j)
+            map[choice][choice] = "Tie"
+        else if (j <= half)
+            map[choice][bonusChoices[opposition]] = bonusChoices[opposition] + " wins"
+        else
+            map[choice][bonusChoices[opposition]] = choice + " wins"
+    }
+    console.log(map)
+})
+
 const computerChoice = ref('')
 const userChoice = ref('')
 
 const generateComputerChoice = () => {
-    if (Math.random() <= 0.33) {
+    if (Math.random() < 0.33) {
         computerChoice.value = 'rock'
-    } else if (Math.random() <= 0.67) {
+    } else if (Math.random() < 0.67) {
         computerChoice.value = 'paper'
+    } else {
+        computerChoice.value = 'scissors'
+    }
+}
+
+const generateBonusComputerChoice = () => {
+    if (Math.random() < 0.2) {
+        computerChoice.value = 'rock'
+    } else if (Math.random() < 0.4) {
+        computerChoice.value = 'spock'
+    } else if (Math.random() < 0.6) {
+        computerChoice.value = 'paper'
+    } else if (Math.random() < 0.8) {
+        computerChoice.value = 'lizard'
     } else {
         computerChoice.value = 'scissors'
     }
@@ -81,12 +112,13 @@ const generateComputerChoice = () => {
 
 // Using Record or Object
 const getResult = (choice1: string, choice2: string) => console.log((map[choice1] || {})[choice2] || "Invalid choice")
+const getBonusResult = (choice1: string, choice2: string) => console.log((map[choice1] || {})[choice2] || "Invalid choice")
 
 // Using Map
 // const getResult = (choice1: string, choice2: string) => console.log(map.get(choice2))
 
 const getUserChoice = (event: Event) => {
-    userChoice.value = event.target?.id
+    userChoice.value = (event.target as HTMLElement)?.id
     generateComputerChoice()
     getResult(userChoice.value, computerChoice.value)
 }
