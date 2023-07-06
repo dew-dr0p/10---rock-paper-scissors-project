@@ -16,5 +16,5 @@
 </template>
 
 <script setup lang="ts">
-import { score } from '../../store/store'
+import { score } from '../store/store'
 </script>

@@ -6,5 +6,5 @@
 </template>
 
 <script setup lang="ts">
-import {components, component} from '../../store/store'
+import {components, component} from '../store/store'
 </script>

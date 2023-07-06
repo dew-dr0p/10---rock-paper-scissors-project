@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import type { RouterView } from 'vue-router';
 import PageHeader from './components/PageHeader.vue';
-import MainPage from './components/MainPage.vue';
+
 </script>
 
 <template>
@@ -8,7 +9,5 @@ import MainPage from './components/MainPage.vue';
     <PageHeader />
   </header>
 
-  <main>
-    <MainPage />
-  </main>
+  <RouterView />
 </template>

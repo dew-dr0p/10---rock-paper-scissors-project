@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { component, userElement, computerElement, generateComputerChoice } from '../../store/store'
+import { component, userElement, computerElement, generateComputerChoice } from '../store/store'
 
 const rawHTML = `${userElement.value.outerHTML}`
 

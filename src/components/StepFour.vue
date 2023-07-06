@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { component, userChoice, userElement, computerChoice, computerElement, getResult, updateScore } from '../../store/store';
+import { component, userChoice, userElement, computerChoice, computerElement, getResult, updateScore } from '../store/store';
 
 const rawHTML = `${userElement.value.outerHTML}`
 

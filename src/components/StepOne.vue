@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { getUserChoice, resetAll } from '../../store/store'
+import { getUserChoice, resetAll } from '../store/store'
 
 onMounted(() => {
     resetAll()

@@ -1,8 +1,8 @@
 import { ref } from 'vue'
-import StepOne from '../src/components/StepOne.vue'
-import StepTwo from '../src/components/StepTwo.vue'
-import StepThree from '../src/components/StepThree.vue'
-import StepFour from '../src/components/StepFour.vue'
+import StepOne from '../components/StepOne.vue'
+import StepTwo from '../components/StepTwo.vue'
+import StepThree from '../components/StepThree.vue'
+import StepFour from '../components/StepFour.vue'
 
 const components: any = {
     StepOne,
