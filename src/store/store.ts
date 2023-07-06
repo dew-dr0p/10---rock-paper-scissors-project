@@ -3,6 +3,7 @@ import StepOne from '../components/StepOne.vue'
 import StepTwo from '../components/StepTwo.vue'
 import StepThree from '../components/StepThree.vue'
 import StepFour from '../components/StepFour.vue'
+import BonusStepOne from '@/components/BonusStepOne.vue'
 
 const components: any = {
     StepOne,
@@ -12,6 +13,12 @@ const components: any = {
 }
 
 const component = ref('StepOne')
+
+const bonusComponents: any = {
+    BonusStepOne,
+}
+
+const bonusComponent = ref('BonusStepOne')
 
 const choices = ["rock", "paper", "scissors"]
 // const bonusChoices = ["rock", "spock", "paper", "lizard", "scissors"]
@@ -66,13 +73,13 @@ const userElement = ref()
 const computerElement = ref()
 
 const rockElement = `<div id="rock" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-rockA scale-150">
-<img id="rock" src="src/assets/images/icon-rock.svg" alt="">
+<img id="rock" src="@/assets/images/icon-rock.svg" alt="">
 </div>`
 const paperElement = `<div id="paper" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-paperA scale-150">
-<img id="paper" src="src/assets/images/icon-paper.svg" alt="">
+<img id="paper" src="@/assets/images/icon-paper.svg" alt="">
 </div>`
 const scissorsElement = `<div id="scissors" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-scissorsA scale-150">
-<img id="scissors" src="src/assets/images/icon-scissors.svg" alt="">
+<img id="scissors" src="@/assets/images/icon-scissors.svg" alt="">
 </div>`
 
 
@@ -138,6 +145,8 @@ function resetAll() {
 export {
     components,
     component,
+    bonusComponents,
+    bonusComponent,
     score,
     userElement,
     userChoice,
