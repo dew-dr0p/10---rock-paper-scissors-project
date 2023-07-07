@@ -41,19 +41,19 @@ const userElement = ref()
 const computerElement = ref()
 
 const rockElement = `<div id="rock" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-rockA scale-150">
-<img id="rock" src="src/assets/images/icon-rock.svg" alt="">
+<img id="rock" src="/assets/icon-rock.svg" alt="">
 </div>`
 const paperElement = `<div id="paper" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-paperA scale-150">
-<img id="paper" src="src/assets/images/icon-paper.svg" alt="">
+<img id="paper" src="/assets/icon-paper.svg" alt="">
 </div>`
 const scissorsElement = `<div id="scissors" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-scissorsA scale-150">
-<img id="scissors" src="src/assets/images/icon-scissors.svg" alt="">
+<img id="scissors" src="/assets/icon-scissors.svg" alt="">
 </div>`
 const lizardElement = `<div id="lizard" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-lizardA scale-150">
-<img id="lizard" src="src/assets/images/icon-lizard.svg" alt="">
+<img id="lizard" src="/assets/icon-lizard.svg" alt="">
 </div>`
 const spockElement = `<div id="spock" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-cyanA scale-150">
-<img id="spock" src="src/assets/images/icon-spock.svg" alt="">
+<img id="spock" src="/assets/icon-spock.svg" alt="">
 </div>`
 
 const getBonusUserChoice = (event: Event) => {
