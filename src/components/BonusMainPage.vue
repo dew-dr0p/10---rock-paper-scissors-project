@@ -6,5 +6,5 @@
 </template>
 
 <script setup lang="ts">
-import {bonusComponents, bonusComponent} from '../store/store'
+import {bonusComponents, bonusComponent} from '../store/bonusStore'
 </script>
