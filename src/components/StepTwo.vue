@@ -23,7 +23,7 @@ const rawHTML = `${userElement.value.outerHTML}`
 setTimeout(() => {
     generateComputerChoice()
     setTimeout(() => {
-        component.value = 'StepFour'
+        component.value = 'StepThree'
     }, 1000);
 }, 2500);
 </script>
