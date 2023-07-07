@@ -4,7 +4,7 @@ import BonusMainPage from '@/components/BonusMainPage.vue'
 </script>
 
 <template>
-   <header>
+   <header class="grid">
     <BonusPageHeader />
   </header>
 

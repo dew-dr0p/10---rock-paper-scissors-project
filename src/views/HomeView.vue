@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.vue';
 </script>
 
 <template>
-  <header>
+  <header class="grid">
     <PageHeader />
   </header>
 
