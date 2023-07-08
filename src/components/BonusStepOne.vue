@@ -1,6 +1,6 @@
 <template>
-    <div class="absolute justify-self-center self-center">
-        <div class="bg-[url('../assets/images/bg-pentagon.svg')] bg-no-repeat relative w-[20rem] h-[17.5rem] -mt-5">
+    <div class="absolute justify-self-center self-center -mt-20 md:mt-0">
+        <div class="bg-[url('../assets/images/bg-pentagon.svg')] bg-no-repeat relative w-[20rem] h-[17.5rem] -mt-5 scale-75 md:scale-100">
             <div @click="getBonusUserChoice" id="spock" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-cyanA absolute -left-20 top-10 cursor-pointer">
                 <img id="spock" src="../assets/images/icon-spock.svg" alt="">
             </div>

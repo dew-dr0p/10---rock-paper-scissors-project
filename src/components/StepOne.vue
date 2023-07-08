@@ -1,6 +1,6 @@
 <template>
-    <div class="absolute justify-self-center self-center">
-        <div class="bg-[url('../assets/images/bg-triangle.svg')] bg-no-repeat relative w-[20rem] h-[17.5rem]">
+    <div class="absolute justify-self-center self-center -mt-20 md:mt-0">
+        <div class="bg-[url('../assets/images/bg-triangle.svg')] bg-no-repeat relative w-[20rem] h-[17.5rem] scale-75 md:scale-100">
             <div @click="getUserChoice" id="paper" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-paperA absolute -top-20 -left-20 cursor-pointer">
                 <img id="paper" src="../assets/images/icon-paper.svg" alt="">
             </div>
