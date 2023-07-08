@@ -39,6 +39,8 @@ choices.forEach((choice, i) => {
     // map[choice][choices[(i+2)%3]] = choice + " wins"
 })
 
+const rulesPopUp = ref(false)
+
 const score = ref(0)
 
 const computerChoice = ref('')
@@ -57,6 +59,13 @@ const scissorsElement = `<div id="scissors" class="bg-[#FFF] rounded-full w-40 h
 <img id="scissors" src="src/assets/images/icon-scissors.svg" alt="">
 </div>`
 
+const showPopUp = () => {
+    rulesPopUp.value = true
+}
+
+const closePopUp = () => {
+    rulesPopUp.value = false
+}
 
 const getUserChoice = (event: Event) => {
     userElement.value = (event.target as HTMLElement)
@@ -105,11 +114,14 @@ function resetAll() {
 export {
     components,
     component,
+    rulesPopUp,
     score,
     userElement,
     userChoice,
     computerElement,
     computerChoice,
+    showPopUp,
+    closePopUp,
     generateComputerChoice,
     getResult,
     getUserChoice,

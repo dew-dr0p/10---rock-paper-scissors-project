@@ -32,6 +32,8 @@ bonusChoices.forEach((choice, i) => {
     }
 })
 
+const bonusRulesPopUp = ref(false)
+
 const score = ref(0)
 
 const computerChoice = ref('')
@@ -55,6 +57,14 @@ const lizardElement = `<div id="lizard" class="bg-[#FFF] rounded-full w-40 h-40 
 const spockElement = `<div id="spock" class="bg-[#FFF] rounded-full w-40 h-40 justify-center items-center flex border-[20px] border-gradients-cyanA scale-150">
 <img id="spock" src="src/assets/images/icon-spock.svg" alt="">
 </div>`
+
+const showPopUp = () => {
+    bonusRulesPopUp.value = true
+}
+
+const closePopUp = () => {
+    bonusRulesPopUp.value = false
+}
 
 const getBonusUserChoice = (event: Event) => {
     userElement.value = (event.target as HTMLElement)
@@ -110,11 +120,14 @@ function resetAll() {
 export {
     bonusComponents,
     bonusComponent,
+    bonusRulesPopUp,
     score,
     userElement,
     userChoice,
     computerElement,
     computerChoice,
+    showPopUp,
+    closePopUp,
     generateBonusComputerChoice,
     getBonusUserChoice,
     getBonusResult,
