@@ -7,7 +7,7 @@
         <div class="bg-[#FFF] p-10 rounded-xl w-fit h-fit self-center justify-self-center">
             <div class="grid grid-flow-col items-center justify-between mb-10">
                 <p class="text-4xl text-gradients-backgroundA uppercase font-bold">Rules</p>
-                <img @click="closePopUp" src="../assets/images/icon-close.svg" alt="Close Icon" class="">
+                <img @click="closePopUp" src="../assets/images/icon-close.svg" alt="Close Icon" class="cursor-pointer">
             </div>
             <img src="../assets/images/image-rules.svg" alt="Rules of rock paper scissors game">
         </div>
